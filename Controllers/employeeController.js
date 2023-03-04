@@ -24,17 +24,17 @@ exports.getEmployee=(request,response,next)=>{
 
 exports.addEmployee=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Employee");
+    response.send("now in add Employee");
 }
 
 
 exports.updateEmployee=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Employee");
+    response.send("now in update Employee");
 }
 
 
 exports.deleteEmployee=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Employee");
+    response.send("now in delete Employee");
 }

@@ -23,17 +23,17 @@ exports.getMember=(request,response,next)=>{
 
 exports.addMember=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Member");
+    response.send("now in add Member");
 }
 
 
 exports.updateMember=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Member");
+    response.send("now in update Member");
 }
 
 
 exports.deleteMember=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Member");
+    response.send("now in delete Member");
 }

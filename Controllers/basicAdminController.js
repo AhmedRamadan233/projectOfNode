@@ -27,19 +27,19 @@ exports.getAllBasicAdmin=(request,response,next)=>{
 
 exports.addBasicAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get basicAdmin");
+    response.send("now in add basicAdmin");
 }
 
 
 exports.updateBasicAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get basicAdmin");
+    response.send("now in update basicAdmin");
 }
 
 
 exports.deleteBasicAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get basicAdmin");
+    response.send("now in delete basicAdmin");
 }
 
 

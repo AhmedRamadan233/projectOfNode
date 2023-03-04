@@ -24,17 +24,17 @@ exports.getAllAdmin=(request,response,next)=>{
 
 exports.addAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Admin");
+    response.send("now in add Admin");
 }
 
 
 exports.updateAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Admin");
+    response.send("now in update Admin");
 }
 
 
 exports.deleteAdmin=(request,response,next)=>{
     console.log(request.query);
-    response.send("now in get Admin");
+    response.send("now in delete Admin");
 }

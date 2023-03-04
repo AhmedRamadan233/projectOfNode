@@ -8,6 +8,7 @@ const app=express();
 const port = process.env.PORT||8080;
 
 //
+const basicAdminRoute = require("./Router/basicAdminRoute");
 const adminRoute = require("./Router/adminRoute");
 const bookRoute = require("./Router/bookRoute");
 const memberRoute = require("./Router/memberRoute");
@@ -35,6 +36,7 @@ app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 // all of router uses in project
+app.use(basicAdminRoute);
 app.use(adminRoute);
 app.use(bookRoute);
 app.use(memberRoute);
