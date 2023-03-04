@@ -1,7 +1,7 @@
 
 const express=require("express");
 //controllers
-const controller=require("../Controllers/adminController");
+const controller=require("../Controllers/basicAdminController");
 //validate
 const {body,param,query}=require("express-validator");
 const validateMW=require("./../Core/Validations/validateMW");
@@ -10,11 +10,11 @@ const basicAdminValidate = require("./../Core/Validations/basicAdminValidate");
 const router=express.Router();
 
 // Admin
-router.route("/admin")
-.get(validateMW,controller.getAllAdmin)
-.post(validateMW,controller.addAdmin)
-.put(validateMW,controller.updateAdmin)
-.delete(validateMW,controller.deleteAdmin);
+router.route("/basicAdmin")
+.get(validateMW,controller.getAllBasicAdmin)
+.post(validateMW,controller.addBasicAdmin)
+.put(validateMW,controller.updateBasicAdmin)
+.delete(validateMW,controller.deleteBasicAdmin);
 
 
 module.exports=router;

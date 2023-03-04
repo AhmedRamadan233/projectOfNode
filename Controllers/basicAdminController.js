@@ -41,3 +41,5 @@ exports.deleteBasicAdmin=(request,response,next)=>{
     console.log(request.query);
     response.send("now in get basicAdmin");
 }
+
+
