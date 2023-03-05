@@ -13,6 +13,7 @@ const router=express.Router();
 router.route("/basicAdmin")
 .get(validateMW,controller.getAllBasicAdmin)
 .post(validateMW,controller.addBasicAdmin)
+//.post(validateMW,controller.addAdmin)
 .put(validateMW,controller.updateBasicAdmin)
 .delete(validateMW,controller.deleteBasicAdmin);
 
