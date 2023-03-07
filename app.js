@@ -45,7 +45,7 @@ app.use(employeeRoute);
 
 //Not FOUND
 app.use((request,response)=>{
-  response.status(404).json({msg : "Middleware not found"});
+  response.status(404).json({msg : "404 Middleware not found "});
 });
 
 //Error MiddleWare

@@ -12,7 +12,7 @@ const adminSchema = new mongoose.Schema({
     hireDate: { type: Date },
     image: { type: String },
     salary: { type: Number },
-    
+
   });
 
 mongoose.model("admins",adminSchema);
