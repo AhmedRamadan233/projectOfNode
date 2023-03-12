@@ -16,6 +16,8 @@ router.route("/basicAdmin")
 .put(validateMW,controller.updateBasicAdmin)
 .delete(validateMW,controller.deleteBasicAdmin);
 
+router.get("/basicAdmin/:id",validateMW,controller.getOneBasicAdmin);
+
 
 module.exports=router;
 

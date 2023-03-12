@@ -2,6 +2,7 @@
 
 const mongoose=require("mongoose");
 const bcrypt = require('bcrypt');
+const { generatePassword } = require("../Core/Utilities/utilities");
 
 
 require("./../Modals/adminModel");
@@ -25,7 +26,8 @@ const MemberSchema=mongoose.model("members");
 exports.getAllBasicAdmin= async (request,response,next)=>{
     try {
         const basicAdmin = await BasicAdminSchema.find();
-        response.json(basicAdmin);
+        // .status
+        response.status(200).json(basicAdmin);
     } catch (error) {
         console.error(error.message);
         response.status(500).send("Server Error");
@@ -40,6 +42,9 @@ exports.addBasicAdmin = async (request, response, next) => {
     firstName: request.body.firstName,
     lastName: request.body.lastName,
     email: request.body.email,
+    // temp password
+    tmpPassword: generatePassword(16),
+
     password: hashedPassword,
     birthDate: request.body.birthDate,
     hireDate: request.body.hireDate,
@@ -103,7 +108,14 @@ exports.deleteBasicAdmin=(request,response,next)=>{
 
 
 
-
-
+exports.getOneBasicAdmin = (request, response, next) => {
+  BasicAdminSchema.findOne({ _id: request.params.id })
+    .then((data) => {
+      response.status(200).json({ data });
+    })
+    .catch((error) => {
+      next(error);
+    });
+};
 
 

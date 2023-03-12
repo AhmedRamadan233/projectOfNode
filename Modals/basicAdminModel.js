@@ -8,10 +8,10 @@ const basicAdminSchema = new mongoose.Schema({
     lastName: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
-    birthDate: { type: Number },
+    birthDate: { type: Date , default:Date.now },
     hireDate: { type: Number },
     image: { type: String },
-    salary: { type: Number },
+    salary: { type: Number ,default:10000 },
 
   });
 
